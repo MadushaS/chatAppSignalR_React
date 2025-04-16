@@ -1,0 +1,31 @@
+@CoreAPI_HostAddress = https://localhost:7251
+
+POST  {{CoreAPI_HostAddress}}/api/register
+Content-Type: application/json
+
+{
+    "email": "madushakv@live.com",
+    "password": "123456",
+}
+
+### Register a new user
+POST  {{CoreAPI_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "madushakv@live.com",
+  "password": "TestPassword123"
+}
+
+### Login with the registered user
+POST  {{CoreAPI_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "madushakv@live.com",
+  "password": "TestPassword123"
+}
+
+### Get user profile
+GET  {{CoreAPI_HostAddress}}/api/auth/user
+Accept: application/json
